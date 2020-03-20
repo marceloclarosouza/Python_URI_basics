@@ -25,7 +25,7 @@ if(s < 0):
 if(d <= 0):
     d = 0
 
-print("%d dia (s)" %d)
-print("%d hora (s)" %h)
-print("%d minuto (s)" %m)
-print("%d segundo (s)" %s)
+print("%d dia(s)" %d)
+print("%d hora(s)" %h)
+print("%d minuto(s)" %m)
+print("%d segundo(s)" %s)
