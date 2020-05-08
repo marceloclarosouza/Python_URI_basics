@@ -2,14 +2,13 @@
 """
 Testing chat bot. COVID19
 """
-#pip install chatterbot_corpus
-
+import chatterbot
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
 bot = ChatBot("Test")
 
-convI = ['Bom dia', 'Bom dia', 'Boa tarde', 'Boa tarde', 'Boa noite', 'Boa noite', 'Tudo bem?', 'Tudo bem', 'oi', 'oi', 'tenho uma dúvida', 'Como possso te ajudar?']
+convI = ['Bom dia' , 'Bom dia', 'Boa tarde',  'Boa tarde', 'Boa noite', 'Boa noite', 'Tudo bem?', 'Tudo bem', 'oi', 'oi', 'tenho uma dúvida', 'Como possso te ajudar?']
 convII = ['O que é covid-19?','É uma doença causada por um virus', 'O que é um virus?', 'É um organismo muito pequeno','ele foi feito pelos chineses?', 'não. é um virus silvestre natural']
 convIII = ['Quais são os sintomas?', 'Febre, falta de ar, pneumonia', 'Pode afetar outros órgãos além dos pulmões?', 'Sim. POde afetar o coração, olhos e rins']
 convIV = ['tem cura?', 'Sim, mas somente pelo próprio sistema imunológico', 'Tem vacina?', 'Ainda não', 'Pode matar', 'Sim, nos casos mais graves']
