@@ -2,7 +2,6 @@
 """
 Testing chat bot. COVID19
 """
-import chatterbot
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 
@@ -16,19 +15,19 @@ convV = ['Nós vamos morrer?', 'Infelizmente entre 5 e 10% da população morrer
 convVI = ['Quais países foram efetados?', 'Praticamente todos os países foram afetados pela pandemia', 'Os EUA vão salvar o mundo?', 'Não. Eles são os mais lascados']
 convVII = ['Nosso governo está trbalhando direito?', 'Os governos estaudais sim. O Federal está deixando a desejar', 'Quantas pessoas foram infectadas?', 'No mundo tod 3,5 milhões. No Brasil 100 mil', 'Tem corona em ribeirão Preto?', 'Sim. temos 700 casos']
 
-trainer = ListTrainer(bot)
-trainer.train(convI)
-trainer.train(convII)
-trainer.train(convIII)
-trainer.train(convIV)
-trainer.train(convV)
-trainer.train(convVI)
-trainer.train(convVII)
+bot.set_trainer = (ListTrainer)
+bot.train(convI)
+bot.train(convII)
+bot.train(convIII)
+bot.train(convIV)
+bot.train(convV)
+bot.train(convVI)
+bot.train(convVII)
 
 while True:
   quest = input("Você: ")
   response = bot.get_response(quest)
-  if float (response.confidence) > 0.10:
+  if float (response.confidence) > 0.5:
     print('FateBot: ', response)
   else:
     print("FateBot: Desculpe, não entendi, por favor refaça a pergunta.")
